@@ -10,7 +10,7 @@
     <!-- jmeter生成jtl格式的结果报告的路径--> 
     <property name="jmeter.result.jtl.dir" value="/Users/vic/.jenkins/workspace/RunAutoApi/jtl" />
     <!-- jmeter生成html格式的结果报告的路径-->
-    <property name="jmeter.result.html.dir" value="/Users/vic/.jenkins/workspace/RunAutoApi" />
+    <property name="jmeter.result.html.dir" value="/Users/vic/.jenkins/workspace/RunAutoApi/report_html" />
     <!-- 生成的报告的前缀-->  
     <property name="ReportName" value="AutoTestReport" />
     <property name="jmeter.result.jtlName" value="${jmeter.result.jtl.dir}/${ReportName}${time}.jtl" />
