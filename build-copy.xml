@@ -16,13 +16,9 @@
     <property name="jmeter.result.jtlName" value="${jmeter.result.jtl.dir}/${ReportName}${time}.jtl" />
     <property name="jmeter.result.htmlName" value="${jmeter.result.html.dir}/${ReportName}.html" />
     
-	<property name="detail" value="Detail" />
+	<property name="detail" value="_detail" />
 	<property name="jmeter.result.jtlNamedetail" value="${jmeter.result.jtl.dir}/${ReportName}${time}.jtl" />
 	<property name="jmeter.result.htmlNamedetail" value="${jmeter.result.html.dir}/${ReportName}${detail}.html" />
-
-  <property name="View" value="View" />
-  <property name="jmeter.result.jtlNamedetail" value="${jmeter.result.jtl.dir}/${ReportName}${time}.jtl" />
-  <property name="jmeter.result.htmlNameview" value="${jmeter.result.html.dir}/${ReportName}${View}.html" />
 
     <target name="run">
         <antcall target="test" />
@@ -51,14 +47,6 @@
           in="${jmeter.result.jtlName}"
           out="${jmeter.result.htmlName}"
           style="${jmeter.home}/extras/jmeter-results-detail-report_21.xsl">
-          <param name="dateReport" expression="${report.datestamp}"/>
-   </xslt>
-    <xslt 
-          classpathref="xslt.classpath"
-          force="true"
-          in="${jmeter.result.jtlName}"
-          out="${jmeter.result.htmlNameview}"
-          style="${jmeter.home}/extras/jmeter-results-detail-report_12.xsl">
           <param name="dateReport" expression="${report.datestamp}"/>
    </xslt>
    <xslt 
